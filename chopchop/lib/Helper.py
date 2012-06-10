@@ -11,7 +11,9 @@ class Helper:
     def get_function_info(func):
         className = ''
         funcName = func.__name__
-
+        
+        print "PRE", type(func)
+        
         if type(func) == types.MethodType:
             _class = func.im_class
 

@@ -1,6 +1,6 @@
 from ..annotations.annotations import cc
 
-
+@cc.expose_class
 class HelloWorld:
     string = "Hello World"
 
@@ -10,3 +10,5 @@ class HelloWorld:
     @cc.expose_function
     def showHelloWorld(self):
         return self.string
+
+print "POST", type(HelloWorld.showHelloWorld)

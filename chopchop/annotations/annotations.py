@@ -1,11 +1,17 @@
 from ..lib.Helper import Helper
 from ..lib.FunctionInfo import FunctionInfo
 
+something = None
 
 class cc:
+    
 
     @staticmethod
     def expose_function(func):
-        info = Helper.get_function_info(func)
-        print info.name
-        print info.className
+        
+        return func
+        
+    @staticmethod
+    def expose_class(clazz):
+        print clazz.__dict__.keys()
+        return clazz        
