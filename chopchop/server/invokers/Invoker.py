@@ -3,11 +3,6 @@ import types
 
 class Invoker(object):
     __metaclass__ = abc.ABCMeta
-    
-    @staticmethod
-    def is_func(func):
-        _valid_func_types = [types.FunctionType, types.LambdaType, types.UnboundMethodType, types.MethodType]
-        return type(func) in _valid_func_types
         
     @staticmethod
     def func_requires_parent(func):

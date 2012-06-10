@@ -1,4 +1,5 @@
 from Invoker import Invoker
+from ...lib.Helper import Helper
 
 class DefaultInvoker(Invoker):
     def get_identifier(self):
@@ -11,7 +12,7 @@ class DefaultInvoker(Invoker):
         super(DefaultInvoker, self).set_janitor(janitor_fun)
         
     def invoke(self, func):
-        if Invoker.is_func(func):
+        if Helper.is_func(func):
             return func()
         else:
             raise TypeError("Cannot invoke function. Provided value is not a function")
