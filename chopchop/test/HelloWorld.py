@@ -10,5 +10,3 @@ class HelloWorld:
     @cc.expose_function
     def showHelloWorld(self):
         return self.string
-
-print "POST", type(HelloWorld.showHelloWorld)

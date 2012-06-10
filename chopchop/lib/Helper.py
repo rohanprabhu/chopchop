@@ -6,13 +6,15 @@ import types
 
 
 class Helper:
+    @staticmethod
+    def is_func(func):
+        _valid_func_types = [types.FunctionType, types.LambdaType, types.UnboundMethodType, types.MethodType]
+        return type(func) in _valid_func_types
 
     @staticmethod
     def get_function_info(func):
         className = ''
         funcName = func.__name__
-        
-        print "PRE", type(func)
         
         if type(func) == types.MethodType:
             _class = func.im_class

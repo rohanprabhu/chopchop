@@ -4,7 +4,6 @@ from ..lib.FunctionInfo import FunctionInfo
 something = None
 
 class cc:
-    
 
     @staticmethod
     def expose_function(func):
@@ -13,5 +12,4 @@ class cc:
         
     @staticmethod
     def expose_class(clazz):
-        print clazz.__dict__.keys()
         return clazz        
