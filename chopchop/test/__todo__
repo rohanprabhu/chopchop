@@ -1,0 +1,32 @@
+
+'''
+SimpleTests: Yes, I know I should use some damn test framework.
+
+endpoint.add_endpoint(["hello", "world"], 100)
+print "---------------------"
+endpoint.add_endpoint(["lol", "me"], 99)
+print "---------------------"
+endpoint.add_endpoint(["hello", "you"], 98)
+print "---------------------"
+endpoint.add_endpoint(["you", "hello"], 11)
+endpoint.add_endpoint(["you", "hello", "here", "there"], 11)
+print "---------------------"
+endpoint.remove_endpoint(["you", "hello", "here", "something"])
+
+print endpoint.get_load_for_endpoint(["hello", "world"])
+print endpoint.get_load_for_endpoint(["lol", "me"])
+print endpoint.get_load_for_endpoint(["hello", "you"])
+print endpoint.get_load_for_endpoint(["you", "hello"])
+print endpoint.get_load_for_endpoint(["hello", "something"])
+print endpoint.get_load_for_endpoint(["something", "world"])
+print endpoint.get_load_for_endpoint(["o", "really"])
+
+
+endpoint.add_endpoint(["hello", "world", "here"], 99)
+endpoint.add_endpoint(["hello", "world", "there"], 99)
+endpoint.add_endpoint(["hello", "something", "somewhere"], 199)
+
+endpoint.move_endpoint(["hello", "something", "somewhere"], ["wicked", "sick"])
+print endpoint.get_load_for_endpoint(["wicked", "sick"])
+
+'''
